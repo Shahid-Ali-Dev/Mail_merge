@@ -1,81 +1,40 @@
-📬 Mail Merge Project
-A simple Python script to automatically generate personalized invitation letters by merging names into a letter template. This is a practical implementation of file handling and string replacement using Python.
+# 📬 Mail Merge Project
 
-✨ Features
-Reads a list of invitee names from a .txt file.
+A simple and effective Python script that automates the generation of personalized invitation letters using a letter template and a list of names.
 
-Replaces a placeholder (e.g., [name]) in a letter template with each actual name.
+---
 
-Saves a personalized letter for each invitee in a specified output folder.
+## ✨ Features
 
-Clean and easy to modify for other mail merge tasks (e.g., emails, certificates).
+- 📂 Reads invitee names from a `.txt` file
+- 📝 Replaces the `[name]` placeholder in a letter template with each name
+- 📄 Outputs a personalized `.txt` letter for each invitee
+- 🔄 Easily adaptable for other use-cases (certificates, emails, etc.)
 
-🗂️ Project Structure
-pgsql
-Copy
-Edit
-MailMergeProject/
-├── Input/
-│   ├── Letters/
-│   │   └── starting_letter.txt        # Template letter with placeholder [name]
-│   └── Names/
-│       └── invited_names.txt          # List of names to send letters to
-│
-├── Output/
-│   └── ReadyToSend/                   # Folder where personalized letters are saved
-│
-└── main.py                            # Main script to perform the mail merge
-🧠 How It Works
-The script reads all names from invited_names.txt.
+---
 
-For each name, it opens starting_letter.txt, replaces [name] with the actual name, and writes the personalized letter to a .txt file inside the Output/ReadyToSend/ folder.
+## 📁 Project Structure
 
-🧾 Example
-If invited_names.txt contains:
+- `starting_letter.txt`: Contains the template letter with `[name]` placeholder  
+- `invited_names.txt`: Contains one name per line  
+- `ReadyToSend/`: Contains the generated personalized letters  
 
-nginx
-Copy
-Edit
-Angela
-John
-Marco
-And starting_letter.txt contains:
+---
 
-css
-Copy
-Edit
-Dear [name],
+## 🧠 How It Works
 
-You are invited to my birthday party this Saturday!
+1. The script reads all names from `invited_names.txt`.
+2. For each name:
+   - It loads the `starting_letter.txt`.
+   - Replaces `[name]` with the actual name.
+   - Saves the new letter as `<name>.txt` inside the `Output/ReadyToSend/` folder.
 
-Sincerely,
-Shahid
-The script will generate:
+---
 
-Angela.txt
 
-John.txt
+## ▶️ How to Run
 
-Marco.txt
+Make sure you have Python 3 installed.
 
-Each containing the personalized version of the letter.
-
-▶️ How to Run
-Ensure your folder structure matches the one shown above.
-
-Run the script:
-
-bash
-Copy
-Edit
+```bash
 python main.py
-Check the Output/ReadyToSend/ folder for the generated letters.
-
-✅ Requirements
-Python 3.x
-
-No external libraries required
-
-🧑‍💻 Author
-Shahid
-Practicing file handling and automation using Python.
